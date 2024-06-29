@@ -4,7 +4,7 @@ import { Parallax } from "react-parallax";
 const Banner = () => {
   return (
     <Parallax
-      bgImage="../../public/background.jpg"
+      bgImage="../../background.jpg"
       bgImageAlt="background"
       strength={500}
       style={{
