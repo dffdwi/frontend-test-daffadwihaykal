@@ -1,6 +1,6 @@
-import React from "react";
-import Banner from "../components/Banner";
-import FetchData from "../components/FetchData";
+import React from 'react';
+import Banner from '../components/Banner';
+import FetchData from '../components/FetchData';
 
 function Ideas() {
   return (

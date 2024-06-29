@@ -1,7 +1,7 @@
 import React from 'react';
 import DataItem from './DataItem';
 
-const DataList = ({ data }) => {
+function DataList({ data }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
       {data.map((item, index) => (
@@ -9,6 +9,6 @@ const DataList = ({ data }) => {
       ))}
     </div>
   );
-};
+}
 
 export default DataList;

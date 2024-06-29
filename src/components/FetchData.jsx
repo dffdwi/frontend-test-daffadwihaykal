@@ -1,10 +1,11 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { asyncFetchIdeas } from '../states/ideas/action';
-import DataList from '../components/DataList';
-import Pagination from '../components/Pagination';
+import DataList from './DataList';
+import Pagination from './Pagination';
 
-const FetchData = () => {
+function FetchData() {
   const dispatch = useDispatch();
   const ideas = useSelector((state) => state.ideas) || [];
   const [sortOrder, setSortOrder] = React.useState('newest');
@@ -31,14 +32,13 @@ const FetchData = () => {
   const sortedData = [...ideas].sort((a, b) => {
     if (sortOrder === 'newest') {
       return new Date(b.published_at) - new Date(a.published_at);
-    } else {
-      return new Date(a.published_at) - new Date(b.published_at);
     }
+    return new Date(a.published_at) - new Date(b.published_at);
   });
 
   const paginatedData = sortedData.slice(
     (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
+    currentPage * itemsPerPage,
   );
 
   if (ideas.length === 0) {
@@ -65,7 +65,15 @@ const FetchData = () => {
         </label>
       </div>
       <div className="mb-4">
-        <span>Showing {paginatedData.length} of {ideas.length} items</span>
+        <span>
+          Showing
+          {paginatedData.length}
+          {' '}
+          of
+          {ideas.length}
+          {' '}
+          items
+        </span>
       </div>
       {paginatedData.length === 0 ? (
         <div className="text-center py-8">No data available</div>
@@ -82,6 +90,6 @@ const FetchData = () => {
       )}
     </div>
   );
-};
+}
 
 export default FetchData;

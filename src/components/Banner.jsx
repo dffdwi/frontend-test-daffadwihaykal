@@ -1,15 +1,15 @@
-import React from "react";
-import { Parallax } from "react-parallax";
+import React from 'react';
+import { Parallax } from 'react-parallax';
 
-const Banner = () => {
+function Banner() {
   return (
     <Parallax
       bgImage="../../background.jpg"
       bgImageAlt="background"
       strength={500}
       style={{
-        height: "100vh",
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 75%, 0% 95%)",
+        height: '100vh',
+        clipPath: 'polygon(0% 0%, 100% 0%, 100% 75%, 0% 95%)',
       }}
     >
       <div className="h-[100vh] flex flex-col items-center justify-center text-center">
@@ -20,6 +20,6 @@ const Banner = () => {
       </div>
     </Parallax>
   );
-};
+}
 
 export default Banner;

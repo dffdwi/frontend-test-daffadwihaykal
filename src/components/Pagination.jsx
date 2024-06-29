@@ -1,6 +1,9 @@
+/* eslint-disable react/button-has-type */
 import React from 'react';
 
-const Pagination = ({ totalItems, itemsPerPage, currentPage, handlePageChange }) => {
+function Pagination({
+  totalItems, itemsPerPage, currentPage, handlePageChange,
+}) {
   const totalPages = Math.ceil(totalItems / itemsPerPage);
   const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
 
@@ -17,6 +20,6 @@ const Pagination = ({ totalItems, itemsPerPage, currentPage, handlePageChange })
       ))}
     </div>
   );
-};
+}
 
 export default Pagination;

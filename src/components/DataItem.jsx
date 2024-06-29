@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DataItem = ({ item, index }) => {
+function DataItem({ item, index }) {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden">
       <img
@@ -15,6 +15,6 @@ const DataItem = ({ item, index }) => {
       </div>
     </div>
   );
-};
+}
 
 export default DataItem;

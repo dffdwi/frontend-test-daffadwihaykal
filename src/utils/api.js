@@ -5,7 +5,7 @@ const api = {
     const response = await fetch(`${API_BASE_URL}/ideas`, {
       method: 'GET',
       headers: {
-        'Accept': 'application/json',
+        Accept: 'application/json',
         'Content-Type': 'application/json',
       },
     });
@@ -15,7 +15,7 @@ const api = {
     }
     const result = await response.json();
     return result.data || []; // Ensure to return an array
-  }
+  },
 };
 
 export default api;

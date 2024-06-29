@@ -1,7 +1,7 @@
-import api from "../../utils/api";
+import api from '../../utils/api';
 
 const ActionType = {
-  RECEIVE_IDEAS: "RECEIVE_IDEAS",
+  RECEIVE_IDEAS: 'RECEIVE_IDEAS',
 };
 
 function receiveIdeasActionCreator(ideas) {
