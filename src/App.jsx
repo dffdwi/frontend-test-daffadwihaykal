@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Header from "./components/Header";
 import Work from "./pages/Work";
 import About from "./pages/About";
@@ -14,6 +14,7 @@ function App() {
       <Header />
       <main>
         <Routes>
+          <Route path="/" element={<Navigate to="/ideas" replace />} />
           <Route path="/work" element={<Work />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />

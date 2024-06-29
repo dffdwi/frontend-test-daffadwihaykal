@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Banner from "../components/Banner";
 
 function Ideas() {
   return (
-    <div>Ideas</div>
-  )
+    <>
+      <Banner />
+    </>
+  );
 }
 
-export default Ideas
+export default Ideas;
